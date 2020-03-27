@@ -139,7 +139,6 @@ let workoutSeed = [
   }
 ];
 
-
 // db.deleteMany({})
 //   .then(() => db.collection.insertMany(workoutSeed))
 //   .then(data => {
@@ -150,8 +149,6 @@ let workoutSeed = [
 //     console.error(err);
 //     process.exit(1);
 //   });
-
-
 
 db.Workout.deleteMany({})
   .then(() => db.Workout.collection.insertMany(workoutSeed))
