@@ -14,9 +14,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:root123@ds261238.mlab.com:61238/heroku_548z0k06"
-mongoose.connect(MONGODB_URI);
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:root123@ds261238.mlab.com:61238/heroku_548z0k06", { useNewUrlParser: true });
 
 db.Workout.create({ name: ""})
   .then(dbWorkout => { 
