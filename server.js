@@ -38,28 +38,21 @@ app.post("/", ({ body }, res) => {
   })
 })
 
+//Couldn't get sendFile to currently work, using redirect
 
 app.get('/exercise', (req, res) => { 
   res.redirect('exercise.html');
 });
-
-
 app.get('/exercise/:id', (req, res) => { 
   res.redirect('exercise.html');
 });
-
-
 app.get('/stats', (req, res) => { 
   res.redirect('stats.html');
 });
-
-
 app.get('/api/workouts', (req, res) => { 
   db.Workout.find()
   .then(results => res.json(results))
 });
-
-
 app.post('/api/workouts', (req, res) => { 
   db.Workout.create({})
   .then(dbWorkout => { 
@@ -81,8 +74,6 @@ app.put('/api/workouts/:id', (req, res) => {
     res.json(err);
   });
 })
-
-
 app.get('/api/workouts/range', (req, res) => { 
   db.Workout.find({})
   .then(dbWorkout => { 
@@ -92,8 +83,6 @@ app.get('/api/workouts/range', (req, res) => {
     res.json(err);
   })
 })
-
-
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
