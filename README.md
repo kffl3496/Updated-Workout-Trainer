@@ -7,5 +7,5 @@ Created a workout/fitness trainer that utilizes mongodb, mongoose, and express f
 
 
 
-
+github: https://github.com/kffl3496/Updated-Workout-Trainer
 Heroku Deployed: https://morning-beach-50647.herokuapp.com/?id=5e7d6074ec1dc100176332c0
